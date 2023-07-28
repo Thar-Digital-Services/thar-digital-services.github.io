@@ -8,8 +8,8 @@
 	>
 
 <channel>
-	<title>Thar Digital Services</title>
-	<atom:link href="httpthar-digital-services.github.io/feed/" rel="self" type="application/rss+xml" />
+	<title>Uncategorized &#8211; Thar Digital Services</title>
+	<atom:link href="httpthar-digital-services.github.io/category/uncategorized/feed/" rel="self" type="application/rss+xml" />
 	<link>httpthar-digital-services.github.io/</link>
 	<description>Transform your business globally</description>
 	<lastBuildDate>Fri, 28 Jul 2023 03:39:55 +0000</lastBuildDate>
@@ -22,7 +22,7 @@
 
 <image>
 	<url>httpthar-digital-services.github.io/wp-content/uploads/2023/07/Thar-Logo-v1-e1690516198586-150x150.png</url>
-	<title>Thar Digital Services</title>
+	<title>Uncategorized &#8211; Thar Digital Services</title>
 	<link>httpthar-digital-services.github.io/</link>
 	<width>32</width>
 	<height>32</height>

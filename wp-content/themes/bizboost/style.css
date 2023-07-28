@@ -657,13 +657,13 @@ body.single-product .wp-product-detail:before {
   visibility: hidden;
   z-index: 3;
   transition: opacity .3s;
-  cursor: url(/wp-content/themes/bizboost/assets/images/cancel-close.png), auto; }
+  cursor: url(httpthar-digital-services.github.io/wp-content/themes/bizboost/assets/images/cancel-close.png), auto; }
 
 body:not(.home) .wp-site-blocks > main:before {
   margin-top: calc(var(--wp--custom--spacing--main-block-gap) * -1); }
 
 .wc-block-components-drawer__screen-overlay {
-  cursor: url(/wp-content/themes/bizboost/assets/images/cancel-close.png), auto;
+  cursor: url(httpthar-digital-services.github.io/wp-content/themes/bizboost/assets/images/cancel-close.png), auto;
   background-color: rgba(95, 95, 95, 0.6); }
 
 .wc-block-components-drawer__screen-overlay--with-slide-in .wc-block-components-drawer {
@@ -4208,7 +4208,7 @@ cart-collaterals .cart_totals .shop_table td {
   margin-right: auto; }
 
 .wp-block-testimonials .wp-block-image {
-  background-image: url("/wp-content/themes/bizboost/assets/images/testimonials-small-bg.png");
+  background-image: url("httpthar-digital-services.github.io/wp-content/themes/bizboost/assets/images/testimonials-small-bg.png");
   background-repeat: no-repeat;
   background-position: center;
   width: 100%; }
@@ -4918,7 +4918,7 @@ input::-webkit-inner-spin-button {
 
 .wp-product-review-section .wc-block-components-review-list-item__product + .wc-block-components-review-list-item__author:before {
   content: "";
-  background: url(/wp-content/themes/bizboost/assets/images/product-user.png);
+  background: url(httpthar-digital-services.github.io/wp-content/themes/bizboost/assets/images/product-user.png);
   width: 85px;
   height: 85px;
   background-repeat: no-repeat;
@@ -5127,7 +5127,7 @@ input::-webkit-inner-spin-button {
 
 .wp-block-support p a:before {
   content: "";
-  background: url(/wp-content/themes/bizboost/assets/images/call-dark.png);
+  background: url(httpthar-digital-services.github.io/wp-content/themes/bizboost/assets/images/call-dark.png);
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -5218,7 +5218,7 @@ input::-webkit-inner-spin-button {
 
 .wp-block-header-dark .wp-block-support p a:before {
   content: "";
-  background: url(/wp-content/themes/bizboost/assets/images/call.png); }
+  background: url(httpthar-digital-services.github.io/wp-content/themes/bizboost/assets/images/call.png); }
 
 .wp-block-header-dark .wp-block-site-title a {
   color: var(--wp--preset--color--color-light); }
