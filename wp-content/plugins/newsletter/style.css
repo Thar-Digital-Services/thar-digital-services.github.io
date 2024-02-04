@@ -42,14 +42,14 @@ form.tnp-subscription, form.tnp-profile {
     display: inline-block;
 }
 
-.tnp-subscription input[type=text], 
-.tnp-subscription input[type=email], 
-.tnp-subscription input[type=submit], 
+.tnp-subscription input[type=text],
+.tnp-subscription input[type=email],
+.tnp-subscription input[type=submit],
 .tnp-subscription select,
 .tnp-subscription textarea,
-.tnp-profile input[type=text], 
-.tnp-profile input[type=email], 
-.tnp-profile input[type=submit], 
+.tnp-profile input[type=text],
+.tnp-profile input[type=email],
+.tnp-profile input[type=submit],
 .tnp-profile select,
 .tnp-profile textarea
 {
@@ -68,7 +68,7 @@ form.tnp-subscription, form.tnp-profile {
     box-sizing: border-box;
 }
 
-.tnp-subscription input[type=checkbox], 
+.tnp-subscription input[type=checkbox],
 .tnp-widget input[type=radio],
 .tnp-profile input[type=checkbox]
 {
@@ -86,7 +86,7 @@ form.tnp-subscription, form.tnp-profile {
 }
 
 .tnp-subscription input.tnp-submit,
-.tnp-profile input.tnp-submit 
+.tnp-profile input.tnp-submit
 {
     background-color: #444;
     color: #fff;
@@ -159,7 +159,7 @@ form.tnp-subscription, form.tnp-profile {
 }
 
 .tnp-field label {
-    
+
 }
 
 /* Newsletter Widget Minimal */
@@ -208,15 +208,20 @@ form.tnp-subscription, form.tnp-profile {
 .tnp-subscription-minimal {
     width: 100%;
     box-sizing: border-box;
+    margin: 10px 0;
 }
 
 .tnp-subscription-minimal form {
+    width: auto;
     margin: 0;
     padding: 0;
     border: 0;
+    white-space: nowrap;
 }
 
-.tnp-subscription-minimal input.tnp-email {
+.tnp-subscription-minimal input.tnp-email,
+.tnp-subscription-minimal input.tnp-name
+{
     width: 70%;
     max-width: 300px;
     box-sizing: border-box;
@@ -228,12 +233,20 @@ form.tnp-subscription, form.tnp-profile {
     font-size: 14px;
     line-height: 20px;
     border-radius: 0px;
+    margin-right: 10px;
+}
+
+.tnp-subscription-minimal.with-name input.tnp-email,
+.tnp-subscription-minimal.with-name input.tnp-name
+{
+    width: 31%;
 }
 
 .tnp-subscription-minimal .tnp-privacy-field {
     margin-top: 10px;
 }
 
+/* Some of these styles are overridden by theme styles... */
 .tnp-subscription-minimal input.tnp-submit {
     width: 29%;
     box-sizing: border-box;
@@ -249,6 +262,24 @@ form.tnp-subscription, form.tnp-profile {
     line-height: 20px;
     border-radius: 0px;
     margin: 0;
+}
+
+.tnp-subscription.tnp-subscription-posts {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+@media all and (max-width: 525px) {
+    .tnp-subscription-minimal.with-name input.tnp-email,
+    .tnp-subscription-minimal.with-name input.tnp-name,
+    .tnp-subscription-minimal input.tnp-submit
+    {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        display: block;
+        margin-bottom: .5rem;
+    }
 }
 
 /* Comments Extension */
