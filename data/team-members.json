@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "name": "Sarandha Tanwar",
+    "role": "Owner, Proprietor",
+    "linkedin": null,
+    "expertise": ["Business Strategy", "Operations", "Company Leadership"],
+    "bio": "Owner of Thar Digital Services, leading the company's strategic direction and operations.",
+    "image": null
+  },
+  {
+    "id": "2",
+    "name": "Shivendra Singh Tanwar",
+    "role": "CTO",
+    "linkedin": "https://www.linkedin.com/in/shivendra-singh-tanwar/",
+    "expertise": ["System Architecture", "Technical Leadership", "Product Development"],
+    "bio": "CTO with extensive experience in building scalable systems and leading engineering teams.",
+    "image": null
+  },
+  {
+    "id": "3",
+    "name": "Kritika Choudhary",
+    "role": "Senior Software Engineer",
+    "linkedin": "https://www.linkedin.com/in/kritika-choudhary2708/",
+    "expertise": ["Software Development", "Full-Stack Engineering", "System Design"],
+    "bio": "Senior Software Engineer with expertise in building robust and scalable applications.",
+    "image": null
+  },
+  {
+    "id": "4",
+    "name": "Roopesh Sarswat",
+    "role": "Software Engineer",
+    "linkedin": "https://www.linkedin.com/in/roopesh-sarswat-47a78317b/",
+    "expertise": ["Software Development", "Backend Engineering", "API Development"],
+    "bio": "Software Engineer focused on developing efficient and maintainable software solutions.",
+    "image": null
+  }
+]
