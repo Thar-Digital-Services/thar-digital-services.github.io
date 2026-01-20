@@ -1,0 +1,9 @@
+{
+  "whatsapp": {
+    "default": "Hello! I would like to discuss my project with Thar Digital Services."
+  },
+  "email": {
+    "subject": "Project Inquiry - Thar Digital Services",
+    "body": "Hello,\n\nI would like to discuss my project with Thar Digital Services.\n\nPlease let me know when would be a good time to connect.\n\nBest regards"
+  }
+}
