@@ -12,9 +12,10 @@ export default function CTA() {
       <div className="absolute inset-0">
         <Image
           src="/images/cta-bg.jpg"
-          alt=""
+          alt="Call to action background"
           fill
           className="object-cover"
+          aria-hidden="true"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/80" />
       </div>

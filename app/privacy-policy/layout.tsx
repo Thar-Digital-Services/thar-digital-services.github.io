@@ -3,6 +3,9 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Privacy Policy',
   description: 'Privacy Policy for Thar Digital Services',
+  alternates: {
+    canonical: 'https://thardigital.in/privacy-policy',
+  },
 };
 
 export default function PrivacyPolicyLayout({

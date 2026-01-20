@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Script from 'next/script';
 import { Button } from '@/components/ui/Button';
 import { ArrowRight, ExternalLink } from 'lucide-react';
 
@@ -55,8 +56,33 @@ const itemVariants = {
 };
 
 export default function CaseStudiesPage() {
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://thardigital.in',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Case Studies',
+        item: 'https://thardigital.in/case-studies',
+      },
+    ],
+  };
+
   return (
-    <div className="pt-32 pb-20">
+    <>
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <div className="pt-32 pb-20">
       <div className="container-custom">
         {/* Header */}
         <motion.div
@@ -205,5 +231,6 @@ export default function CaseStudiesPage() {
         </motion.div>
       </div>
     </div>
+    </>
   );
 }

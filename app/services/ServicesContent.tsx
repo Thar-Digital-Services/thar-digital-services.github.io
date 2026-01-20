@@ -92,8 +92,9 @@ export default function ServicesContent() {
       <div className="absolute inset-0">
         <img
           src="/images/services-bg.jpg"
-          alt=""
+          alt="Technology services background"
           className="w-full h-full object-cover opacity-30"
+          aria-hidden="true"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
       </div>

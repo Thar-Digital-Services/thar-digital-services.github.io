@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Script from 'next/script';
 import { SITE_CONFIG } from '@/lib/constants';
 
 const containerVariants = {
@@ -23,14 +24,40 @@ const itemVariants = {
 };
 
 export default function TermsConditionsPage() {
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://thardigital.in',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Terms and Conditions',
+        item: 'https://thardigital.in/terms-conditions',
+      },
+    ],
+  };
+
   return (
-    <div className="pt-32 pb-20 relative min-h-screen">
+    <>
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <div className="pt-32 pb-20 relative min-h-screen">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
           src="/images/services-bg.jpg"
-          alt=""
+          alt="Terms and conditions page background"
           className="w-full h-full object-cover opacity-30"
+          aria-hidden="true"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
       </div>
@@ -116,5 +143,6 @@ export default function TermsConditionsPage() {
         </motion.div>
       </div>
     </div>
+    </>
   );
 }
