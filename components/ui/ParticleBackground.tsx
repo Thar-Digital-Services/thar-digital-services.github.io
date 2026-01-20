@@ -97,7 +97,7 @@ function Particle({
   // Calculate mouse repulsion
   const mouseInfluenceX = useTransform(
     [baseX, mouseX, baseY, mouseY],
-    ([px, mx, py, my]) => {
+    ([px, mx, py, my]: number[]) => {
       if (!mouseInteraction) return 0;
       const dx = px - mx;
       const dy = py - my;
@@ -113,7 +113,7 @@ function Particle({
 
   const mouseInfluenceY = useTransform(
     [baseX, mouseX, baseY, mouseY],
-    ([px, mx, py, my]) => {
+    ([px, mx, py, my]: number[]) => {
       if (!mouseInteraction) return 0;
       const dx = px - mx;
       const dy = py - my;
@@ -127,8 +127,8 @@ function Particle({
     }
   );
 
-  const finalX = useTransform([baseX, mouseInfluenceX], ([bx, mx]) => bx + mx);
-  const finalY = useTransform([baseY, mouseInfluenceY], ([by, my]) => by + my);
+  const finalX = useTransform([baseX, mouseInfluenceX], ([bx, mx]: number[]) => bx + mx);
+  const finalY = useTransform([baseY, mouseInfluenceY], ([by, my]: number[]) => by + my);
 
   return (
     <motion.div
