@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Script from 'next/script';
 import { FaLinkedin } from 'react-icons/fa';
 import teamMembersData from '@/data/team-members.json';
 import { TeamMember } from '@/types';
@@ -6,13 +7,41 @@ import { TeamMember } from '@/types';
 export const metadata: Metadata = {
   title: 'About Us',
   description: 'Learn about Thar Digital Services: our mission, leadership philosophy, engineering culture, and meet our team.',
+  alternates: {
+    canonical: 'https://thardigital.in/about',
+  },
 };
 
 const teamMembers = teamMembersData as TeamMember[];
 
 export default function AboutPage() {
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://thardigital.in',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'About',
+        item: 'https://thardigital.in/about',
+      },
+    ],
+  };
+
   return (
-    <div className="pt-20 pb-20">
+    <>
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <div className="pt-20 pb-20">
       {/* About Us Section with Background */}
       <section className="relative py-8 mb-0 bg-gradient-to-br from-background via-background to-primary/5">
         {/* Background Pattern/Decoration */}
@@ -48,8 +77,9 @@ export default function AboutPage() {
         <div className="absolute inset-0">
           <img
             src="/images/cta-bg.jpg"
-            alt=""
+            alt="Team section background"
             className="w-full h-full object-cover opacity-40"
+            aria-hidden="true"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/90 to-background/95" />
         </div>
@@ -121,5 +151,6 @@ export default function AboutPage() {
         </div>
       </section>
     </div>
+    </>
   );
 }
