@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import Link from 'next/link';
 import {
   Users,
@@ -90,11 +91,13 @@ export default function ServicesContent() {
     <div className="pt-32 pb-20 relative min-h-screen">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <img
+        <Image
           src="/images/services-bg.jpg"
           alt="Technology services background"
-          className="w-full h-full object-cover opacity-30"
+          fill
+          className="object-cover opacity-30"
           aria-hidden="true"
+          sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
       </div>

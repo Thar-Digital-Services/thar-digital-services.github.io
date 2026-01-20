@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Image from 'next/image';
 import Script from 'next/script';
 import { FaLinkedin } from 'react-icons/fa';
 import teamMembersData from '@/data/team-members.json';
@@ -75,11 +76,13 @@ export default function AboutPage() {
       <section className="relative pt-12 pb-20">
         {/* Darker Background Image */}
         <div className="absolute inset-0">
-          <img
+          <Image
             src="/images/cta-bg.jpg"
             alt="Team section background"
-            className="w-full h-full object-cover opacity-40"
+            fill
+            className="object-cover opacity-40"
             aria-hidden="true"
+            sizes="100vw"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/90 to-background/95" />
         </div>
@@ -98,9 +101,11 @@ export default function AboutPage() {
               {teamMembers.map((member) => (
                 <div key={member.id} className="card text-center group">
                   {member.image ? (
-                    <img
+                    <Image
                       src={member.image}
                       alt={member.name}
+                      width={128}
+                      height={128}
                       className="rounded-full mx-auto mb-4 w-32 h-32 object-cover"
                     />
                   ) : (

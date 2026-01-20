@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/Button';
 import { ArrowRight } from 'lucide-react';
@@ -12,11 +13,14 @@ export default function Hero() {
       <section className="relative h-screen flex items-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
-          <img
+          <Image
             src="/images/hero-bg.jpg"
             alt="Technology and engineering background"
-            className="w-full h-full object-cover"
+            fill
+            priority
+            className="object-cover"
             aria-hidden="true"
+            sizes="100vw"
           />
           {/* Reduced overlay for better image visibility */}
           <div className="absolute inset-0 bg-gradient-to-r from-background/60 via-background/40 to-background/50" />
@@ -121,11 +125,13 @@ export default function Hero() {
       <section className="relative pt-20">
         {/* Background Image - matching ServicesSection */}
         <div className="absolute inset-0">
-          <img
+          <Image
             src="/images/services-bg.jpg"
             alt="Technology services background"
-            className="w-full h-full object-cover opacity-30"
+            fill
+            className="object-cover opacity-30"
             aria-hidden="true"
+            sizes="100vw"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
         </div>
@@ -148,10 +154,12 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 className="group flex flex-col items-center gap-3 hover:opacity-80 transition-opacity"
               >
-                <div className="h-16 px-8 flex items-center justify-center rounded-lg bg-card/50 border border-border hover:bg-card/70 transition-colors">
-                  <img
+                <div className="h-16 px-8 flex items-center justify-center rounded-lg bg-card/50 border border-border hover:bg-card/70 transition-colors relative">
+                  <Image
                     src="https://billte.ch/assets/billte-logo-BfM7_FDN.png"
                     alt="Billte - Digital Billing Solutions"
+                    width={120}
+                    height={40}
                     className="h-8 object-contain"
                   />
                 </div>

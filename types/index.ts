@@ -15,8 +15,8 @@ export interface TeamMember {
   role: string;
   expertise: string[];
   bio: string;
-  image?: string;
-  linkedin?: string;
+  image?: string | null;
+  linkedin?: string | null;
 }
 
 export interface CaseStudy {
