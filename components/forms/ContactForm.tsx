@@ -31,14 +31,27 @@ export default function ContactForm() {
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
+    const endpoint = process.env.NEXT_PUBLIC_CONTACT_FORM_URL;
+    if (!endpoint) {
+      setSubmitStatus('error');
+      setIsSubmitting(false);
+      return;
+    }
+
+    const honeypot = (document.getElementById('website') as HTMLInputElement | null)?.value ?? '';
+
     try {
-      // TODO: Replace with actual API endpoint or form service
-      // For now, just log and show success
-      console.log('Form data:', data);
-      
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify({ ...data, website: honeypot }),
+      });
+
+      const result = await response.json();
+      if (!response.ok || !result.success) {
+        throw new Error(result.error || 'Submission failed');
+      }
+
       setSubmitStatus('success');
       reset();
     } catch (error) {
@@ -112,6 +125,17 @@ export default function ContactForm() {
         {errors.message && (
           <p className="mt-1 text-sm text-red-muted">{errors.message.message}</p>
         )}
+      </div>
+
+      <div className="absolute left-[-9999px]" aria-hidden="true">
+        <label htmlFor="website">Leave this field empty</label>
+        <input
+          id="website"
+          name="website"
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+        />
       </div>
 
       {submitStatus === 'success' && (
