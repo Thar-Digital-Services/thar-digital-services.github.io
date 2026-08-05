@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://thardigital.in/dr-b-s-tanwar/sitemap.xml
